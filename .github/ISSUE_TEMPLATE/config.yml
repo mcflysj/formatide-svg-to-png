@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Use Formatide
+    url: https://formatide.com/
+    about: Open the SVG to PNG converter.
+  - name: Conversion guide
+    url: https://github.com/mcflysj/formatide-svg-to-png/blob/main/docs/svg-to-png-guide.md
+    about: Check sizing, transparency and troubleshooting advice.

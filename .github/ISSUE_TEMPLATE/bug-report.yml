@@ -1,0 +1,40 @@
+name: Report a conversion problem
+description: Share a reproducible problem with the hosted Formatide converter.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues and attachments are public. Use a synthetic example and remove private artwork, file names and identifying details from screenshots.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the output size and background settings you selected.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include any error shown by Formatide.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: For example, Safari on iOS or Chrome on Windows, including the version if available.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Optional synthetic example
+      description: Paste a minimal SVG or add a screenshot that you are comfortable making public.

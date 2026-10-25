@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+  <title>Wide transparent banner, 960 by 320 pixels</title>
+  <desc>A three-to-one landscape illustration with transparent margins.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ccfbf1"/>
+      <stop offset="1" stop-color="#a5f3fc"/>
+    </linearGradient>
+    <clipPath id="window"><rect x="32" y="24" width="896" height="272" rx="30"/></clipPath>
+  </defs>
+  <g clip-path="url(#window)">
+    <rect x="32" y="24" width="896" height="272" fill="url(#sky)"/>
+    <circle cx="736" cy="95" r="42" fill="#fbbf24"/>
+    <path d="M32 256L205 78l181 178 124-130 198 170H32Z" fill="#14b8a6"/>
+    <path d="M240 296l211-177 185 177H240Z" fill="#0f766e"/>
+    <path d="M582 296l158-138 188 138H582Z" fill="#115e59"/>
+  </g>
+</svg>

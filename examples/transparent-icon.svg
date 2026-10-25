@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Transparent icon, 256 by 256 pixels</title>
+  <desc>The corners and the center of the ring are transparent.</desc>
+  <circle cx="128" cy="128" r="84" fill="none" stroke="#0d9488" stroke-width="28"/>
+  <path d="M91 129l25 25 51-55" fill="none" stroke="#0f766e" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="203" cy="53" r="19" fill="#f59e0b" fill-opacity="0.5"/>
+</svg>

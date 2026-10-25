@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <title>ViewBox-only artwork, default output 640 by 360 pixels</title>
+  <desc>No width or height attributes; the converter derives the size from viewBox.</desc>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <path id="spark" d="M0-30L8-8 30 0 8 8 0 30-8 8-30 0-8-8Z"/>
+  </defs>
+  <rect x="40" y="40" width="560" height="280" rx="30" fill="url(#tile)"/>
+  <circle cx="208" cy="180" r="84" fill="#ffffff" fill-opacity="0.2"/>
+  <circle cx="208" cy="180" r="54" fill="none" stroke="#ffffff" stroke-width="14"/>
+  <path d="M330 143h150m-150 37h190m-190 37h110" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+  <use href="#spark" transform="translate(536 88)" fill="#fde68a"/>
+  <use href="#spark" transform="translate(96 282) scale(0.6)" fill="#e9d5ff"/>
+</svg>
