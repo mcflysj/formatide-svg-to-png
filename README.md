@@ -1,70 +1,93 @@
-# Formatide — SVG to PNG Converter
+# Formatide — SVG to PNG Browser Demo & Examples
 
-Convert SVG files to PNG in your browser, with exact pixel dimensions, transparent backgrounds and batch ZIP downloads. Free to use. No account required.
+Convert SVG to PNG locally, inspect a small working implementation, and try reusable examples. This repository is the public companion to [Formatide's browser conversion tools](https://formatide.com/converter).
 
-**[Open Formatide](https://formatide.com/)** · [Conversion guide](docs/svg-to-png-guide.md) · [Sample SVGs](examples/) · [Report a problem](https://github.com/mcflysj/formatide-svg-to-png/issues/new/choose)
+**[Try the live SVG to PNG demo](https://mcflysj.github.io/formatide-svg-to-png/)** · **[Convert SVG to PNG in your browser](https://formatide.com/)** · [Demo module & API](demo/README.md) · [Conversion guide](docs/svg-to-png-guide.md)
 
-This is Formatide's public home for guides, examples and product feedback. The converter runs at **formatide.com**; this repository does not contain the application's source code.
+## A demo you can use and reuse
 
-## What you can do
+The [GitHub Pages demo](https://mcflysj.github.io/formatide-svg-to-png/) creates real PNG downloads on your device. Choose a bundled SVG, load a small file, or edit the source. Set a fixed canvas, keep a transparent background or add a solid color, then inspect and download the result.
 
-- Convert one SVG or a batch of up to 50 files.
-- Keep the original dimensions, use a 1×–4× scale, or choose a custom size.
-- Fit artwork inside a fixed canvas without stretching or cropping it.
-- Preserve transparency or fill the background with white or a custom color.
-- Preview each result, download individual PNGs, or save completed files as a ZIP.
-- Continue large batches in separate ZIP parts when the output memory limit is reached.
+[![Working SVG to PNG browser demo with a transparent icon, fixed canvas controls and a PNG download](assets/demo-preview.png)](https://mcflysj.github.io/formatide-svg-to-png/)
 
-Your SVG files, image previews, PNGs and ZIPs are processed on your device. They are not uploaded to Formatide for conversion.
+- **Standalone module:** [`demo/svg-to-png.js`](demo/svg-to-png.js), with no runtime dependencies.
+- **Reusable code:** the files in [`demo/`](demo/) are [MIT licensed](demo/LICENSE).
+- **Working examples:** a transparent icon, a wide banner and viewBox-only artwork.
+- **Browser checks:** PNG dimensions and pixels, local processing, unsupported content, download invalidation and mobile layout are tested in Chromium and WebKit.
 
-## Try it in three steps
+This is an independent reference implementation with a deliberately small SVG subset. The full Formatide application's source code is not included.
 
-1. Open **[formatide.com](https://formatide.com/)** and choose **Try a sample**, or select your own SVG files.
-2. Choose the output size and background, then select **Convert to PNG**.
-3. Check the preview and use **Download PNG** or **Download all ZIP**.
+| | Public demo | Full SVG to PNG tool |
+| --- | --- | --- |
+| Input | One static SVG, up to 64 KiB | Up to 50 SVGs; 10 MiB each, 50 MiB per batch |
+| Size | Fixed canvas, up to 2,048 px per side | Original, 1×–4×, proportional resize or fixed canvas; up to 4,096 px per side and 16 MP |
+| SVG features | Shapes, internal gradients, simple shape references, flat clipping and masks | Broader static SVG support, including supported embedded resources and text |
+| Downloads | Individual PNG | Individual PNGs, batch ZIP and saved-part continuation at the 64 MiB results budget |
+| File processing | On your device | On your device |
 
-<img src="assets/converter-preview.png" alt="Formatide showing a converted landscape PNG with transparent corners and download controls" width="600">
+For larger files or batch ZIP downloads, use the [full SVG to PNG converter](https://formatide.com/).
 
-*A converted PNG preview. The checkerboard indicates transparency and is not part of the downloaded image.*
+## Try three useful exports
 
-## Useful examples
+1. **Transparent icon:** load the icon sample and export at 512 × 512. Its empty corners remain transparent.
+2. **Square canvas:** load the wide banner and set 512 × 512. The artwork stays centered without stretching or cropping.
+3. **ViewBox dimensions:** load the viewBox artwork. Its original dimensions are 640 × 360 even without width or height attributes.
 
-| Task | Suggested settings |
+The [sample folder](examples/) contains the original SVGs. The [conversion guide](docs/svg-to-png-guide.md) explains sizing, fonts, transparency and common export problems.
+
+## Reuse the renderer
+
+Serve the files over HTTP, then import the browser module:
+
+```js
+import { svgToPng } from './demo/svg-to-png.js'
+
+const png = await svgToPng(svgSource, {
+  width: 512,
+  height: 512,
+  background: 'transparent', // or a six-digit hex color
+})
+// png is a real image/png Blob; preview or download it with an object URL.
+```
+
+See the [API and supported SVG subset](demo/README.md) before using it with your own files. This demo rejects text, styles, filters, embedded images, scripts and external resources rather than attempting to render every SVG feature.
+
+## Current tools on Formatide
+
+Checked against the live website on **October 30, 2026**. The website now offers 13 converters; the Pages demo above focuses on SVG to PNG.
+
+| Task | Live tools |
 | --- | --- |
-| Export an app icon at twice its original size | **Scale → 2×**, transparent background |
-| Put a logo on a presentation slide | Custom dimensions, transparent or white background |
-| Give differently shaped images the same canvas size | **Custom → Fixed canvas**, set width and height |
-| Convert several illustrations together | Select the files, convert, then download the ZIP |
+| SVG exports | [SVG to PNG](https://formatide.com/), [SVG to JPG](https://formatide.com/svg-to-jpg), [SVG to WebP](https://formatide.com/svg-to-webp), [SVG to ICO](https://formatide.com/svg-to-ico) |
+| Images to JPG | [JFIF to JPG](https://formatide.com/jfif-to-jpg), [AVIF to JPG](https://formatide.com/avif-to-jpg), [WebP to JPG](https://formatide.com/webp-to-jpg), [PNG to JPG](https://formatide.com/png-to-jpg), [HEIC to JPG](https://formatide.com/heic-to-jpg) |
+| Photos to PDF | [JPG to PDF](https://formatide.com/jpg-to-pdf), [HEIC to PDF](https://formatide.com/heic-to-pdf) |
+| Structured data | [CSV to JSON](https://formatide.com/csv-to-json), [JSON to CSV](https://formatide.com/json-to-csv) |
 
-The [conversion guide](docs/svg-to-png-guide.md) explains sizing, transparency, fonts and common errors. The [sample folder](examples/) contains three small SVGs with known dimensions so you can check the workflow before using your own artwork.
+The photo-to-PDF tools offer previews, ordering, 1/2/4 photos per page and A4 / Letter / Match image layouts. HEIC support targets supported primary still photos. The data tools handle UTF-8 CSV and flat JSON object arrays, with delimiter options and controls for IDs, columns and formula protection. Read each tool's page for its own limits and supported inputs.
 
-## Current limits
+## Run locally
 
-| Limit | Value |
-| --- | --- |
-| Files per batch | 50 |
-| Input file size | 10 MiB per file; 50 MiB per batch |
-| PNG dimensions | Up to 4,096 px per side and 16 megapixels |
-| PNG results held at one time | 64 MiB |
+Use Node.js 24 or newer:
 
-At the output limit, Formatide pauses the batch. Download the completed part, confirm that you have saved it, then continue. Keep the tab open until you have downloaded everything. Clearing or refreshing the page ends the current session; there is no saved conversion history.
+```sh
+npm ci
+npm run build
+python3 -m http.server 8080 --directory _site --bind 127.0.0.1
+```
 
-## Before you convert
+Open `http://127.0.0.1:8080/`. The build copies only the demo, samples and demo license into `_site/`; it needs no API keys or conversion server.
 
-**SVG support:** Formatide handles static SVG artwork. External images, fonts and stylesheets must be embedded. Scripts, animation and embedded HTML are not supported.
+```sh
+npx playwright install chromium webkit
+npm test
+```
 
-**Text:** Fonts must be available to the browser or embedded in the SVG. Convert text to outlines in your design tool when exact lettering matters. Always inspect the PNG preview.
+Pushes to `main` run the browser checks and publish GitHub Pages after they pass. Pull requests run checks without deploying. See [CONTRIBUTING.md](CONTRIBUTING.md) for small, useful ways to improve the example.
 
-**Transparency:** A transparent background preserves empty areas. It does not remove a white rectangle or another background already drawn inside the SVG.
+## Privacy and feedback
 
-**Offline use:** Conversion works locally after the page and conversion resources have loaded. ZIP packaging also needs its resource to have loaded. Opening the website or loading a new resource requires a connection.
+The Pages demo has no analytics or conversion API. GitHub serves the page and its sample files; your selected SVG and PNG stay in your browser. The full website has its own [privacy policy](https://formatide.com/privacy), including optional analytics that requires consent.
 
-## Privacy
+[Report a conversion problem or suggest an improvement](https://github.com/mcflysj/formatide-svg-to-png/issues/new/choose). Use a synthetic SVG and remove private artwork or identifying details from public issues and screenshots.
 
-File conversion stays in your browser. Website delivery still makes ordinary network requests. Optional usage analytics is off until you give consent; rejecting it does not limit conversion features. See the [privacy policy](https://formatide.com/privacy) for details and use **Privacy settings** in the website footer to change your choice.
-
-## Feedback
-
-[Open an issue](https://github.com/mcflysj/formatide-svg-to-png/issues/new/choose) for a reproducible problem or a feature suggestion. Include your browser, the settings used, and what happened. GitHub issues are public: use a small synthetic SVG if an example is needed, and remove private artwork or identifying information from screenshots.
-
-For information about the hosted tool, see [About Formatide](https://formatide.com/about) and the [terms of use](https://formatide.com/terms).
+[Browse all Formatide converters](https://formatide.com/converter) · [About Formatide](https://formatide.com/about)

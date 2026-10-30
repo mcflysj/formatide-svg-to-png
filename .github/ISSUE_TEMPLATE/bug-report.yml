@@ -1,11 +1,18 @@
 name: Report a conversion problem
-description: Share a reproducible problem with the hosted Formatide converter.
+description: Share a reproducible problem with the public demo or a Formatide converter.
 title: "[Bug] "
 body:
   - type: markdown
     attributes:
       value: |
         Issues and attachments are public. Use a synthetic example and remove private artwork, file names and identifying details from screenshots.
+  - type: input
+    id: tool
+    attributes:
+      label: Which demo or converter?
+      description: Include the page URL, for example the Pages demo or formatide.com/heic-to-pdf.
+    validations:
+      required: true
   - type: textarea
     id: steps
     attributes:

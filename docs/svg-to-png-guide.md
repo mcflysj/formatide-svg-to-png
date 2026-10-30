@@ -1,6 +1,6 @@
 # How to convert SVG to PNG with Formatide
 
-[Formatide](https://formatide.com/) converts static SVG artwork to PNG locally in your browser. This guide covers a few common export choices and how to check the result.
+[Convert SVG to PNG in your browser with Formatide](https://formatide.com/). This guide describes the full website's sizing, transparency and export workflow. For an inspectable working example, try the [GitHub Pages SVG to PNG demo](https://mcflysj.github.io/formatide-svg-to-png/) and its [standalone module](../demo/README.md).
 
 ## Choose the size for the destination
 
@@ -52,4 +52,4 @@ Optional analytics is separate from conversion and requires consent. Read the [p
 
 The [sample SVGs](../examples/) cover a transparent icon, a wide banner and artwork with only a `viewBox`. Open a file on GitHub, use **Download raw file**, then choose the downloaded SVG in Formatide.
 
-[Open the converter](https://formatide.com/) · [Back to the project overview](../README.md)
+[SVG to PNG converter](https://formatide.com/) · [All current Formatide converters](https://formatide.com/converter) · [Back to the project overview](../README.md)

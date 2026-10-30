@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="index,follow">
+  <title>SVG to PNG Browser Demo & Examples | Formatide</title>
+  <meta name="description" content="Try an open SVG to PNG browser demo. Convert static SVG shapes locally, set a transparent or solid background, and download a real PNG. Includes reusable code and examples.">
+  <link rel="canonical" href="https://mcflysj.github.io/formatide-svg-to-png/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SVG to PNG Browser Demo | Formatide">
+  <meta property="og:description" content="A small, working SVG to PNG example. Your file stays in your browser. Try the demo or reuse the standalone module.">
+  <meta property="og:url" content="https://mcflysj.github.io/formatide-svg-to-png/">
+  <meta name="theme-color" content="#087d80">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#demo">Skip to demo</a>
+  <header class="header wrap">
+    <a class="brand" href="https://formatide.com/" aria-label="Formatide home"><span class="mark">f.</span>formatide<span class="brand-dot">.</span></a>
+    <nav aria-label="Main"><a href="#demo">Try the demo</a><a href="https://github.com/mcflysj/formatide-svg-to-png">Source & examples ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow"><span class="live-dot"></span> THE SMALL, OPEN DEMO</p>
+      <h1>SVG to PNG.<br><span>Right in your browser.</span></h1>
+      <p class="intro">Choose an example, set your canvas, and download a real PNG.<br class="desktop"> A little tool you can use, inspect, and build on.</p>
+      <div class="benefits"><span>✓ Local processing</span><span>✓ No account</span><span>✓ MIT demo code</span></div>
+    </section>
+    <section class="workspace wrap" id="demo" aria-label="SVG to PNG demo">
+      <div class="workspace-top"><span class="eyebrow">VECTOR IN. PNG OUT.</span><span class="badge">LIVE DEMO</span></div>
+      <div class="workspace-grid">
+        <div class="preview-column">
+          <div class="preview-heading"><h2>Your PNG preview</h2><span id="result-size">Your PNG will appear here</span></div>
+          <div class="checker preview-canvas"><p id="placeholder"><span class="outline-icon">↗</span>Give your SVG a new format.<br><small>Choose a sample and select Convert to PNG.</small></p><img id="preview" alt="Converted PNG preview" hidden></div>
+          <p class="caption">The checkerboard represents transparency. It is not in your PNG.</p>
+        </div>
+        <form id="convert-form" class="controls">
+          <label for="sample">1. Start with an example</label>
+          <select id="sample"><option value="transparent-icon.svg">Transparent icon · 256 × 256</option><option value="wide-banner.svg">Landscape banner · 960 × 320</option><option value="viewbox-artwork.svg">ViewBox artwork · 640 × 360</option></select>
+          <label class="file-label" for="file">Or choose a small SVG from your device <input id="file" type="file" accept=".svg,image/svg+xml"></label>
+          <div class="control-section"><label>2. Set your canvas</label><div class="dimensions"><label for="width">Width <input id="width" type="number" min="1" max="2048" value="256" required inputmode="numeric"></label><span>×</span><label for="height">Height <input id="height" type="number" min="1" max="2048" value="256" required inputmode="numeric"></label><span>px</span></div><p class="hint">Artwork fits in the center, keeping its proportions.</p></div>
+          <div class="control-section"><label for="background">3. Pick a background</label><div class="background-row"><select id="background"><option value="transparent">Transparent</option><option value="#ffffff">White</option><option value="color">Custom color</option></select><input id="color" type="color" value="#f1f8f6" aria-label="Custom background color" disabled></div></div>
+          <button id="convert" class="button primary" type="submit">Convert to PNG <span aria-hidden="true">→</span></button>
+          <a id="download" role="link" class="button secondary" aria-disabled="true" tabindex="-1">Download PNG <span aria-hidden="true">↓</span></a>
+          <p id="status" class="status" role="status" aria-live="polite">Loading sample…</p>
+        </form>
+      </div>
+      <details class="source-panel"><summary>Inspect or edit the SVG source</summary><label class="sr-only" for="source">SVG source</label><textarea id="source" rows="9" spellcheck="false" aria-describedby="demo-limits"></textarea></details>
+      <p id="demo-limits" class="demo-limits">Demo: one file, up to 64 KiB and 2,048 px per side. Supports static shapes, internal gradients and simple references. Text, images, CSS, filters and external resources are outside this demo's scope. <a href="https://formatide.com/">Use the full SVG to PNG converter</a> for larger files, more SVG features and batch ZIPs.</p>
+      <noscript><p class="demo-limits">Enable JavaScript to run this local demo. You can still read the guides and download the examples from the repository.</p></noscript>
+    </section>
+    <section class="notes wrap" aria-label="About this example">
+      <article><span class="step">01 / TRY</span><h2>See what changes.</h2><p>Export the icon at 512 × 512. Give the wide banner a square canvas. Compare a transparent PNG with a white background.</p></article>
+      <article><span class="step">02 / LEARN</span><h2>Keep the useful part.</h2><p>The <a href="https://github.com/mcflysj/formatide-svg-to-png/blob/main/demo/svg-to-png.js">standalone SVG to PNG module</a> uses browser APIs with no runtime dependencies. Read its constraints and reuse it under MIT.</p></article>
+      <article><span class="step">03 / GO FURTHER</span><h2>A whole batch? Head here.</h2><p><a href="https://formatide.com/">Convert SVG to PNG in your browser</a> with up to 50 files, precise dimensions, more SVG features and ZIP downloads on Formatide.</p></article>
+    </section>
+    <section class="tool-section wrap">
+      <div class="section-title"><p class="eyebrow">ALSO ON FORMATIDE.COM</p><h2>More formats. Same local approach.</h2><p>The live website now has 13 converters. These links open the full tools on Formatide.</p></div>
+      <div class="tool-links">
+        <a href="https://formatide.com/">SVG → PNG <span>↗</span></a><a href="https://formatide.com/svg-to-jpg">SVG → JPG <span>↗</span></a><a href="https://formatide.com/svg-to-webp">SVG → WebP <span>↗</span></a><a href="https://formatide.com/svg-to-ico">SVG → ICO <span>↗</span></a><a href="https://formatide.com/jfif-to-jpg">JFIF → JPG <span>↗</span></a><a href="https://formatide.com/avif-to-jpg">AVIF → JPG <span>↗</span></a><a href="https://formatide.com/webp-to-jpg">WebP → JPG <span>↗</span></a><a href="https://formatide.com/png-to-jpg">PNG → JPG <span>↗</span></a><a href="https://formatide.com/heic-to-jpg">HEIC → JPG <span>↗</span></a><a href="https://formatide.com/heic-to-pdf">HEIC → PDF <span>↗</span></a><a href="https://formatide.com/jpg-to-pdf">JPG → PDF <span>↗</span></a><a href="https://formatide.com/csv-to-json">CSV → JSON <span>↗</span></a><a href="https://formatide.com/json-to-csv">JSON → CSV <span>↗</span></a>
+      </div>
+    </section>
+    <section class="faq wrap"><p class="eyebrow">A FEW DETAILS</p><h2>Before you convert.</h2>
+      <details><summary>Does this demo upload my SVG?</summary><p>No. The demo reads your file, renders it and creates the PNG in your browser. Sample files load from this site. There are no conversion requests or analytics scripts in the demo. GitHub delivers the website and handles ordinary website requests.</p></details>
+      <details><summary>Is this the complete Formatide application?</summary><p>This is a small, independent reference implementation for static SVG shapes. The full website supports a wider range of SVG features, batch conversion and additional formats. Its limits and privacy policy are explained on <a href="https://formatide.com/">Formatide's SVG to PNG converter</a>.</p></details>
+      <details><summary>Can I reuse the code?</summary><p>Yes. The files in <code>demo/</code> are MIT licensed. See the <a href="https://github.com/mcflysj/formatide-svg-to-png/blob/main/demo/README.md">module API and supported SVG subset</a>. Keep the original license when redistributing the demo code. Formatide's name and logo identify the product.</p></details>
+      <details><summary>Will transparency remove an existing white rectangle?</summary><p>No. Transparency affects empty canvas space. A white shape inside the SVG remains part of the artwork. This demo does not remove backgrounds.</p></details>
+    </section>
+  </main>
+  <footer class="wrap"><span>© 2026 Formatide · Demo code: MIT</span><a href="https://github.com/mcflysj/formatide-svg-to-png/issues/new/choose">Feedback & ideas ↗</a><a href="https://formatide.com/privacy">Formatide privacy policy ↗</a></footer>
+</body>
+</html>

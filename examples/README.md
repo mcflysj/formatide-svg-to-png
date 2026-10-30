@@ -11,7 +11,7 @@ These small, synthetic illustrations let you try the converter without using pri
 ## Use a sample
 
 1. Open one of the SVG files above and choose **Download raw file**.
-2. Open [Formatide](https://formatide.com/) and select the downloaded file.
+2. Open the [SVG to PNG converter](https://formatide.com/) and select the downloaded file, or use the samples directly in the [live browser demo](https://mcflysj.github.io/formatide-svg-to-png/).
 3. Choose a size and background, convert, and inspect the PNG.
 
 To try the app immediately without downloading a file first, choose **Try a sample** on the website.
