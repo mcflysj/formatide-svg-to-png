@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="robots" content="index,follow">
-  <title>SVG to PNG Browser Demo & Examples | Formatide</title>
-  <meta name="description" content="Try an open SVG to PNG browser demo. Convert static SVG shapes locally, set a transparent or solid background, and download a real PNG. Includes reusable code and examples.">
+  <title>SVG to PNG JavaScript Example — Canvas Demo | Formatide</title>
+  <meta name="description" content="Explore a dependency-free SVG to PNG JavaScript example using Canvas. Inspect the source, run the demo and reuse the standalone module under MIT.">
   <link rel="canonical" href="https://mcflysj.github.io/formatide-svg-to-png/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SVG to PNG Browser Demo | Formatide">
-  <meta property="og:description" content="A small, working SVG to PNG example. Your file stays in your browser. Try the demo or reuse the standalone module.">
+  <meta property="og:title" content="SVG to PNG JavaScript Example | Formatide">
+  <meta property="og:description" content="Learn the SVG → image → Canvas → PNG Blob workflow. Run an inspectable JavaScript example with no runtime dependencies and MIT-licensed demo code.">
   <meta property="og:url" content="https://mcflysj.github.io/formatide-svg-to-png/">
   <meta name="theme-color" content="#087d80">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -21,21 +21,22 @@
   <a class="skip" href="#demo">Skip to demo</a>
   <header class="header wrap">
     <a class="brand" href="https://formatide.com/" aria-label="Formatide home"><span class="mark">f.</span>formatide<span class="brand-dot">.</span></a>
-    <nav aria-label="Main"><a href="#demo">Try the demo</a><a href="https://github.com/mcflysj/formatide-svg-to-png">Source & examples ↗</a></nav>
+    <nav aria-label="Main"><a href="#demo">Run the example</a><a href="https://github.com/mcflysj/formatide-svg-to-png">Source & examples ↗</a></nav>
   </header>
   <main>
     <section class="hero wrap">
-      <p class="eyebrow"><span class="live-dot"></span> THE SMALL, OPEN DEMO</p>
-      <h1>SVG to PNG.<br><span>Right in your browser.</span></h1>
-      <p class="intro">Choose an example, set your canvas, and download a real PNG.<br class="desktop"> A little tool you can use, inspect, and build on.</p>
-      <div class="benefits"><span>✓ Local processing</span><span>✓ No account</span><span>✓ MIT demo code</span></div>
+      <p class="eyebrow"><span class="live-dot"></span> JAVASCRIPT / CANVAS REFERENCE</p>
+      <h1>SVG to PNG in JavaScript.<br><span>A Canvas code example.</span></h1>
+      <p class="intro">Inspect a dependency-free JavaScript module that renders static SVGs with Canvas.<br class="desktop"> Run the example, explore the source, and reuse the demo code under MIT.</p>
+      <div class="benefits"><span>✓ No runtime dependencies</span><span>✓ Inspectable source</span><span>✓ MIT licensed</span></div>
+      <p class="hero-tool-link">Need a ready-to-use tool? <a href="https://formatide.com/">Use the full SVG to PNG converter on Formatide</a> for batch jobs and more SVG features.</p>
     </section>
-    <section class="workspace wrap" id="demo" aria-label="SVG to PNG demo">
-      <div class="workspace-top"><span class="eyebrow">VECTOR IN. PNG OUT.</span><span class="badge">LIVE DEMO</span></div>
+    <section class="workspace wrap" id="demo" aria-label="SVG to PNG JavaScript example">
+      <div class="workspace-top"><span class="eyebrow">SVG → IMAGE → CANVAS → PNG BLOB</span><span class="badge">RUNNABLE EXAMPLE</span></div>
       <div class="workspace-grid">
         <div class="preview-column">
           <div class="preview-heading"><h2>Your PNG preview</h2><span id="result-size">Your PNG will appear here</span></div>
-          <div class="checker preview-canvas"><p id="placeholder"><span class="outline-icon">↗</span>Give your SVG a new format.<br><small>Choose a sample and select Convert to PNG.</small></p><img id="preview" alt="Converted PNG preview" hidden></div>
+          <div class="checker preview-canvas"><p id="placeholder"><span class="outline-icon">↗</span>Run the JavaScript example.<br><small>Choose a sample and select Convert to PNG.</small></p><img id="preview" alt="Converted PNG preview" hidden></div>
           <p class="caption">The checkerboard represents transparency. It is not in your PNG.</p>
         </div>
         <form id="convert-form" class="controls">

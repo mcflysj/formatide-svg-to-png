@@ -91,7 +91,7 @@ test('mobile layout, static metadata and links work from a project subpath', asy
   expect(await page.locator('.tool-links a').count()).toBe(13)
   const root = await request.get('./')
   expect(root.status()).toBe(200)
-  expect(await root.text()).toContain('SVG to PNG.')
+  expect(await root.text()).toContain('SVG to PNG in JavaScript.')
   const sitemap = await request.get('sitemap.xml')
   expect(sitemap.status()).toBe(200)
   expect(await sitemap.text()).toContain('https://mcflysj.github.io/formatide-svg-to-png/')

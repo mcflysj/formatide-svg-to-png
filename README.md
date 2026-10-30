@@ -1,14 +1,14 @@
-# Formatide — SVG to PNG Browser Demo & Examples
+# Formatide — SVG to PNG JavaScript & Canvas Example
 
-Convert SVG to PNG locally, inspect a small working implementation, and try reusable examples. This repository is the public companion to [Formatide's browser conversion tools](https://formatide.com/converter).
+Learn the SVG-to-PNG Canvas workflow with a small, dependency-free JavaScript reference implementation. This repository is the public companion to [Formatide's browser conversion tools](https://formatide.com/converter).
 
-**[Try the live SVG to PNG demo](https://mcflysj.github.io/formatide-svg-to-png/)** · **[Convert SVG to PNG in your browser](https://formatide.com/)** · [Demo module & API](demo/README.md) · [Conversion guide](docs/svg-to-png-guide.md)
+**[Run the SVG to PNG JavaScript example](https://mcflysj.github.io/formatide-svg-to-png/)** · **[Convert SVG to PNG in your browser](https://formatide.com/)** · [Demo module & API](demo/README.md) · [Conversion guide](docs/svg-to-png-guide.md)
 
 ## A demo you can use and reuse
 
 The [GitHub Pages demo](https://mcflysj.github.io/formatide-svg-to-png/) creates real PNG downloads on your device. Choose a bundled SVG, load a small file, or edit the source. Set a fixed canvas, keep a transparent background or add a solid color, then inspect and download the result.
 
-[![Working SVG to PNG browser demo with a transparent icon, fixed canvas controls and a PNG download](assets/demo-preview.png)](https://mcflysj.github.io/formatide-svg-to-png/)
+[![SVG to PNG JavaScript and Canvas example with inspectable source, a transparent icon and a real PNG download](assets/demo-preview.png)](https://mcflysj.github.io/formatide-svg-to-png/)
 
 - **Standalone module:** [`demo/svg-to-png.js`](demo/svg-to-png.js), with no runtime dependencies.
 - **Reusable code:** the files in [`demo/`](demo/) are [MIT licensed](demo/LICENSE).
