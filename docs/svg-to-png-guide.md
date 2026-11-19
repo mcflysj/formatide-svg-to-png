@@ -12,6 +12,19 @@ Use **Custom** when you need a specific width or height. **Keep ratio** preserve
 
 PNG is lossless. Choose pixel dimensions for your destination rather than looking for a quality slider or a DPI setting.
 
+## Where does the empty space in a square PNG come from?
+
+The [landscape banner](../examples/wide-banner.svg) has a 960 × 320 viewBox. At a width of 300 pixels, that 3:1 drawing takes up 100 pixels of height. A square export centers that strip and adds 100 transparent rows above it and 100 below. The SVG also has a small transparent margin of its own.
+
+| Canvas | Download the actual PNG | What to look for |
+| --- | --- | --- |
+| 300 × 100 | [Banner at its original aspect ratio](exports/banner-300x100.png) | The first visible pixel is on row 7. This gap comes from the artwork. |
+| 300 × 300 | [The same banner centered in a square](exports/banner-300x300.png) | The first visible pixel is on row 107. The extra 100 rows come from fitting the banner in the square. |
+
+To reproduce the pair, open the [live demo](https://mcflysj.github.io/formatide-svg-to-png/), choose **Landscape banner**, and keep **Transparent**. Enter each canvas size in turn, click **Convert to PNG**, and download each result. The row numbers above start at zero and come from reading the alpha channel in these two downloads.
+
+For a responsive web banner, export at 300 × 100 and use CSS to size it on the page. For an asset slot that requires a square file, export at 300 × 300. CSS can change how either file appears on screen. The padding inside a downloaded square PNG travels with the file.
+
 ## Preserve transparency
 
 Choose **Transparent** for logos and icons that will be placed over another background. The checkerboard in the preview represents transparent pixels; it is not included in the PNG.

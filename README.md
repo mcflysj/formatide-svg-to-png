@@ -30,7 +30,7 @@ For larger files or batch ZIP downloads, use the [full SVG to PNG converter](htt
 ## Try three useful exports
 
 1. **Transparent icon:** load the icon sample and export at 512 × 512. Its empty corners remain transparent.
-2. **Square canvas:** load the wide banner and set 512 × 512. The artwork stays centered without stretching or cropping.
+2. **Square canvas:** [Compare two real PNG exports](docs/svg-to-png-guide.md#where-does-the-empty-space-in-a-square-png-come-from) to see how much padding comes from the SVG and how much the canvas adds.
 3. **ViewBox dimensions:** load the viewBox artwork. Its original dimensions are 640 × 360 even without width or height attributes.
 
 The [sample folder](examples/) contains the original SVGs. The [conversion guide](docs/svg-to-png-guide.md) explains sizing, fonts, transparency and common export problems.
