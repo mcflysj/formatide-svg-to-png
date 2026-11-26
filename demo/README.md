@@ -37,4 +37,4 @@ The renderer uses a Blob URL, an image element and a bounded Canvas. SVG markup 
 
 Native SVG rendering can vary between browsers. This example does not offer batch ZIPs, embedded resources, text layout, print profiles or an interruptible renderer. It supports PNG only and does not run on Node.js without a browser DOM and Canvas implementation.
 
-For the full tool, [convert SVG to PNG in your browser on Formatide](https://formatide.com/). For this example's source and checks, see the [repository overview](../README.md).
+For the full tool, [convert SVG to PNG in your browser on Formatide](https://formatide.com/svg-to-png). For this example's source and checks, see the [repository overview](../README.md).

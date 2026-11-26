@@ -1,8 +1,8 @@
 # Formatide — SVG to PNG JavaScript & Canvas Example
 
-Learn the SVG-to-PNG Canvas workflow with a small, dependency-free JavaScript reference implementation. This repository is the public companion to [Formatide's browser conversion tools](https://formatide.com/converter).
+Learn the SVG-to-PNG Canvas workflow with a small, dependency-free JavaScript reference implementation. This repository is the public companion to [Formatide’s SVG to PNG converter](https://formatide.com/svg-to-png).
 
-**[Run the SVG to PNG JavaScript example](https://mcflysj.github.io/formatide-svg-to-png/)** · **[Convert SVG to PNG in your browser](https://formatide.com/)** · [Demo module & API](demo/README.md) · [Conversion guide](docs/svg-to-png-guide.md)
+**[Run the SVG to PNG JavaScript example](https://mcflysj.github.io/formatide-svg-to-png/)** · **[Convert SVG to PNG in your browser](https://formatide.com/svg-to-png)** · [Demo module & API](demo/README.md) · [Conversion guide](docs/svg-to-png-guide.md)
 
 ## A demo you can use and reuse
 
@@ -25,7 +25,7 @@ This is an independent reference implementation with a deliberately small SVG su
 | Downloads | Individual PNG | Individual PNGs, batch ZIP and saved-part continuation at the 64 MiB results budget |
 | File processing | On your device | On your device |
 
-For larger files or batch ZIP downloads, use the [full SVG to PNG converter](https://formatide.com/).
+For larger files or batch ZIP downloads, use the [full SVG to PNG converter](https://formatide.com/svg-to-png).
 
 ## Try three useful exports
 
@@ -54,12 +54,14 @@ See the [API and supported SVG subset](demo/README.md) before using it with your
 
 ## Current tools on Formatide
 
-Checked against the live website on **October 30, 2026**. The website now offers 13 converters; the Pages demo above focuses on SVG to PNG.
+The [Formatide homepage](https://formatide.com/) opens an image canvas. Stack screenshots into a long image or combine photos in a 2–9-slot collage. Drag the dividers, add text, and save as PNG, JPG or WebP.
 
 | Task | Live tools |
 | --- | --- |
-| SVG exports | [SVG to PNG](https://formatide.com/), [SVG to JPG](https://formatide.com/svg-to-jpg), [SVG to WebP](https://formatide.com/svg-to-webp), [SVG to ICO](https://formatide.com/svg-to-ico) |
+| SVG exports | [SVG to PNG](https://formatide.com/svg-to-png), [SVG to JPG](https://formatide.com/svg-to-jpg), [SVG to WebP](https://formatide.com/svg-to-webp), [SVG to ICO](https://formatide.com/svg-to-ico) |
 | Images to JPG | [JFIF to JPG](https://formatide.com/jfif-to-jpg), [AVIF to JPG](https://formatide.com/avif-to-jpg), [WebP to JPG](https://formatide.com/webp-to-jpg), [PNG to JPG](https://formatide.com/png-to-jpg), [HEIC to JPG](https://formatide.com/heic-to-jpg) |
+| Photo projects | [Image canvas](https://formatide.com/), [Seamless carousel maker](https://formatide.com/seamless-carousel-maker) |
+| PDF files | [PDF tools](https://formatide.com/file-tools) |
 | Photos to PDF | [JPG to PDF](https://formatide.com/jpg-to-pdf), [HEIC to PDF](https://formatide.com/heic-to-pdf) |
 | Structured data | [CSV to JSON](https://formatide.com/csv-to-json), [JSON to CSV](https://formatide.com/json-to-csv) |
 
@@ -90,4 +92,4 @@ The Pages demo has no analytics or conversion API. GitHub serves the page and it
 
 [Report a conversion problem or suggest an improvement](https://github.com/mcflysj/formatide-svg-to-png/issues/new/choose). Use a synthetic SVG and remove private artwork or identifying details from public issues and screenshots.
 
-[Browse all Formatide converters](https://formatide.com/converter) · [About Formatide](https://formatide.com/about)
+[Open the image canvas](https://formatide.com/) · [Browse Formatide converters](https://formatide.com/converter) · [About Formatide](https://formatide.com/about)
