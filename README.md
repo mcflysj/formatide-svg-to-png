@@ -54,7 +54,7 @@ See the [API and supported SVG subset](demo/README.md) before using it with your
 
 ## Current tools on Formatide
 
-The [Formatide homepage](https://formatide.com/) opens an image canvas. Stack screenshots into a long image or combine photos in a 2–9-slot collage. Drag the dividers, add text, and save as PNG, JPG or WebP.
+The [Formatide homepage](https://formatide.com/) opens an image canvas. Stack screenshots into a long image or combine photos in a 2–9-slot collage. Drag the dividers, add text, and save as PNG, JPG or WebP. The [screenshot stacking walkthrough](docs/stack-screenshots-for-a-guide.md) includes source panels and a finished PNG.
 
 | Task | Live tools |
 | --- | --- |

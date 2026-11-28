@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="224" viewBox="0 0 800 224">
+  <rect width="800" height="224" fill="#dfeaff"/>
+  <rect x="32" y="22" width="736" height="180" rx="18" fill="#fff"/>
+  <text x="60" y="72" fill="#213e64" font-family="Arial, sans-serif" font-size="28" font-weight="700">01 / Choose a layout</text>
+  <path d="M60 93h680" stroke="#d7dde4" stroke-width="2"/>
+  <text x="60" y="143" fill="#28333f" font-family="Arial, sans-serif" font-size="20">Page layout</text>
+  <rect x="340" y="112" width="172" height="50" rx="10" fill="#213e64"/>
+  <text x="426" y="144" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18">Portrait</text>
+  <rect x="526" y="112" width="160" height="50" rx="10" fill="#dfeaff"/>
+  <text x="606" y="144" text-anchor="middle" fill="#213e64" font-family="Arial, sans-serif" font-size="18">Landscape</text>
+</svg>
